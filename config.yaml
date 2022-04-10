@@ -39,7 +39,7 @@ params:
 
     sidebar:
         emoji: 🍥
-        subtitle: “别掉棒，继续跑”
+        subtitle: “那些附着于时代的人”
         avatar:
             enabled: false
             local: false
