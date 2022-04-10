@@ -39,7 +39,7 @@ params:
 
     sidebar:
         emoji: 🍥
-        subtitle: “我是MazeL98，很高兴认识你”
+        subtitle: “记录前端学习笔记”
         avatar:
             enabled: false
             local: false
