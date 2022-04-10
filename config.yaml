@@ -39,7 +39,7 @@ params:
 
     sidebar:
         emoji: 🍥
-        subtitle: “记录前端学习笔记”
+        subtitle: “记录前端学习中踩过的坑”
         avatar:
             enabled: false
             local: false
