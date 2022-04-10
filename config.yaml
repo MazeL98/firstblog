@@ -30,7 +30,7 @@ params:
     favicon: /img/favicon.ico
 
     footer:
-        since: 2020
+        since: 2022
         customText:
 
     dateFormat:
@@ -39,7 +39,7 @@ params:
 
     sidebar:
         emoji: 🍥
-        subtitle: “那些附着于时代的人”
+        subtitle: “我是MazeL98，很高兴认识你”
         avatar:
             enabled: false
             local: false
