@@ -1,4 +1,4 @@
-baseurl: https://www.mazel98.com
+baseurl: localhost
 languageCode: en-us
 theme: hugo-theme-stack
 paginate: 5
@@ -38,12 +38,12 @@ params:
         lastUpdated: Jan 02, 2006 15:04 MST
 
     sidebar:
-        emoji: 🍥
-        subtitle: “记录我在前端学习中遇到的坑及解决方案”
-        avatar:
-            enabled: false
-            local: false
-            src: 
+        emoji: 
+        subtitle: “忘我而无用的专注”
+        avatar: 
+            enabled: true
+            local:  true
+            src: /img/avatar.jpg
 
     article:
         math: false

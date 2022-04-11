@@ -20,6 +20,7 @@ footer.site-footer {
     }
 
     .powerby {
+        display: inline-block;
         color: var(--body-text-color);
         font-weight: normal;
         font-size: 1.2rem;
@@ -27,5 +28,12 @@ footer.site-footer {
         a {
             color: var(--body-text-color);
         }
+    }
+
+    .beian {
+        display: inline-block;
+        font-size: 1rem;
+        font-weight: normal;
+        margin-left: 10px;
     }
 }
