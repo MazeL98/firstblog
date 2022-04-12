@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>MazeL98的不老歌</title>
-        <link>localhost/</link>
+        <link>/</link>
         <description>Recent content on MazeL98的不老歌</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 16 Mar 2022 14:56:37 +0800</lastBuildDate><atom:link href="localhost/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 16 Mar 2022 14:56:37 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>如何在github上快速找到需要的开源项目</title>
-        <link>localhost/p/%E5%A6%82%E4%BD%95%E5%9C%A8github%E4%B8%8A%E5%BF%AB%E9%80%9F%E6%89%BE%E5%88%B0%E9%9C%80%E8%A6%81%E7%9A%84%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</link>
+        <link>/p/%E5%A6%82%E4%BD%95%E5%9C%A8github%E4%B8%8A%E5%BF%AB%E9%80%9F%E6%89%BE%E5%88%B0%E9%9C%80%E8%A6%81%E7%9A%84%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</link>
         <pubDate>Wed, 16 Mar 2022 14:56:37 +0800</pubDate>
         
-        <guid>localhost/p/%E5%A6%82%E4%BD%95%E5%9C%A8github%E4%B8%8A%E5%BF%AB%E9%80%9F%E6%89%BE%E5%88%B0%E9%9C%80%E8%A6%81%E7%9A%84%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</guid>
+        <guid>/p/%E5%A6%82%E4%BD%95%E5%9C%A8github%E4%B8%8A%E5%BF%AB%E9%80%9F%E6%89%BE%E5%88%B0%E9%9C%80%E8%A6%81%E7%9A%84%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</guid>
         <description>&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -58,10 +58,10 @@
         </item>
         <item>
         <title>第一次本地运行vue-element-admin解决npm install报错git dep preparation failed</title>
-        <link>localhost/p/%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%9C%AC%E5%9C%B0%E8%BF%90%E8%A1%8Cvue-element-admin%E8%A7%A3%E5%86%B3npm-install%E6%8A%A5%E9%94%99git-dep-preparation-failed/</link>
+        <link>/p/%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%9C%AC%E5%9C%B0%E8%BF%90%E8%A1%8Cvue-element-admin%E8%A7%A3%E5%86%B3npm-install%E6%8A%A5%E9%94%99git-dep-preparation-failed/</link>
         <pubDate>Wed, 16 Mar 2022 14:24:22 +0800</pubDate>
         
-        <guid>localhost/p/%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%9C%AC%E5%9C%B0%E8%BF%90%E8%A1%8Cvue-element-admin%E8%A7%A3%E5%86%B3npm-install%E6%8A%A5%E9%94%99git-dep-preparation-failed/</guid>
+        <guid>/p/%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%9C%AC%E5%9C%B0%E8%BF%90%E8%A1%8Cvue-element-admin%E8%A7%A3%E5%86%B3npm-install%E6%8A%A5%E9%94%99git-dep-preparation-failed/</guid>
         <description>&lt;p&gt;项目地址：https://github.com/PanJiaChen/vue-element-admin&lt;/p&gt;
 &lt;p&gt;解决方案参考：https://ask.csdn.net/questions/7624615?spm=1100839930&amp;amp;username=weixin_52394634&lt;/p&gt;
 &lt;p&gt;执行 npm install ，在安装 tui-eiditor 编辑器时报错：git dep preparation failed&lt;/p&gt;
