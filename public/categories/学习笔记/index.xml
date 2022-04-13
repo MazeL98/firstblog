@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on MazeL98的不老歌</title>
-    <link>/post/</link>
-    <description>Recent content in Posts on MazeL98的不老歌</description>
+    <title>学习笔记 on MazeL98的不老歌</title>
+    <link>/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+    <description>Recent content in 学习笔记 on MazeL98的不老歌</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 16 Mar 2022 14:56:37 +0800</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Mar 2022 14:56:37 +0800</lastBuildDate><atom:link href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>如何在Github上快速找到需要的开源项目</title>
       <link>/p/%E5%A6%82%E4%BD%95%E5%9C%A8github%E4%B8%8A%E5%BF%AB%E9%80%9F%E6%89%BE%E5%88%B0%E9%9C%80%E8%A6%81%E7%9A%84%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</link>

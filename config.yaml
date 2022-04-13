@@ -1,14 +1,14 @@
 baseurl: 
 languageCode: en-us
 theme: hugo-theme-stack
-paginate: 5
+paginate: 10
 title: MazeL98的不老歌
 
 # Change it to your Disqus shortname before using
 disqusShortname: hugo-theme-stack
 
 # GA Tracking ID
-googleAnalytics:
+# googleAnalytics:
 
 # Theme i18n support
 # Available values: en, fr, id, ja, ko, pt-br, zh-cn, zh-tw, es, de, nl, it, th, el, uk
@@ -39,7 +39,7 @@ params:
 
     sidebar:
         emoji: 
-        subtitle: “忘我而无用的专注”
+        subtitle: “To be a rock and not to roll”
         avatar: 
             enabled: true
             local:  true
@@ -187,15 +187,15 @@ menu:
               icon: home
         - identifier: about
           name: About
-          url: /
-          weight: 0
+          url: /about
+          weight: -60
           params:
               ### For demonstration purpose, the home link will be open in a new tab
               newTab: true
               icon: user
         - identifier: archives
           name: Archives
-          url: /
+          url: /archives
           weight: 0
           params:
               ### For demonstration purpose, the home link will be open in a new tab
@@ -203,7 +203,7 @@ menu:
               icon: archives
         - identifier: search
           name: Search
-          url: /
+          url: /search
           weight: 0
           params:
               ### For demonstration purpose, the home link will be open in a new tab

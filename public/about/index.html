@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='项目地址：https://github.com/PanJiaChen/vue-element-admin 解决方案参考：https://ask'><title>第一次本地运行vue-element-admin解决npm install报错git dep preparation failed</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='关于我'><title>About</title>
 
-<link rel='canonical' href='/p/%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%9C%AC%E5%9C%B0%E8%BF%90%E8%A1%8Cvue-element-admin%E8%A7%A3%E5%86%B3npm-install%E6%8A%A5%E9%94%99git-dep-preparation-failed/'>
+<link rel='canonical' href='/about/'>
 
-<link rel="stylesheet" href="/scss/style.min.033f086b9e2005d00604f4648a0de8346e5e1cc15eea858016971b5b4efd10f4.css"><meta property='og:title' content='第一次本地运行vue-element-admin解决npm install报错git dep preparation failed'>
-<meta property='og:description' content='项目地址：https://github.com/PanJiaChen/vue-element-admin 解决方案参考：https://ask'>
-<meta property='og:url' content='/p/%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%9C%AC%E5%9C%B0%E8%BF%90%E8%A1%8Cvue-element-admin%E8%A7%A3%E5%86%B3npm-install%E6%8A%A5%E9%94%99git-dep-preparation-failed/'>
+<link rel="stylesheet" href="/scss/style.min.033f086b9e2005d00604f4648a0de8346e5e1cc15eea858016971b5b4efd10f4.css"><meta property='og:title' content='About'>
+<meta property='og:description' content='关于我'>
+<meta property='og:url' content='/about/'>
 <meta property='og:site_name' content='MazeL98的不老歌'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Vue' /><meta property='article:tag' content='project' /><meta property='article:published_time' content='2022-03-16T14:24:22&#43;08:00'/><meta property='article:modified_time' content='2022-03-16T14:24:22&#43;08:00'/>
-<meta name="twitter:title" content="第一次本地运行vue-element-admin解决npm install报错git dep preparation failed">
-<meta name="twitter:description" content="项目地址：https://github.com/PanJiaChen/vue-element-admin 解决方案参考：https://ask">
+<meta property='og:type' content='article'><meta property='article:section' content='' /><meta property='article:published_time' content='2022-04-13T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-04-13T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="About">
+<meta name="twitter:description" content="关于我">
     <link rel="shortcut icon" href="/img/favicon.ico" />
 
     </head>
@@ -140,7 +140,7 @@
         
         
 
-        <li >
+        <li  class='current' >
             <a href='/about' target="_blank">
                 
                 
@@ -211,19 +211,15 @@
 
     <div class="article-details">
     
-    <header class="article-category">
-        
-            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" >
-                学习笔记
-            </a>
-        
-    </header>
-    
 
     <h2 class="article-title">
-        <a href="/p/%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%9C%AC%E5%9C%B0%E8%BF%90%E8%A1%8Cvue-element-admin%E8%A7%A3%E5%86%B3npm-install%E6%8A%A5%E9%94%99git-dep-preparation-failed/">第一次本地运行vue-element-admin解决npm install报错git dep preparation failed</a>
+        <a href="/about/">About</a>
     </h2>
 
+    
+    <h3 class="article-subtitle">
+        关于我
+    </h3>
     
 
     
@@ -239,7 +235,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Mar 16, 2022</time>
+                <time class="article-time--published">Apr 13, 2022</time>
             </div>
         
 
@@ -254,7 +250,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 2 分钟
+                    阅读时长: 1 分钟
                 </time>
             </div>
         
@@ -266,66 +262,13 @@
     <section class="article-content">
     
     
-    <p>项目地址：https://github.com/PanJiaChen/vue-element-admin</p>
-<p>解决方案参考：https://ask.csdn.net/questions/7624615?spm=1100839930&amp;username=weixin_52394634</p>
-<p>执行 npm install ，在安装 tui-eiditor 编辑器时报错：git dep preparation failed</p>
-<p>更换 cnpm / yarn 命令重新安装，仍然报错。</p>
-<p>单独安装 tui-editor 最新版本仍然是相同的报错。</p>
-<p>参考上面这位博主的解决方案我进行了如下操作：</p>
-<p>1、重新用淘宝镜像的连接安装cnpm</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="n">npm</span> <span class="n">install</span> <span class="n">-g</span> <span class="n">cnpm</span> <span class="p">-</span><span class="n">-registry</span><span class="p">=</span><span class="n">https</span><span class="err">:</span><span class="p">//</span><span class="n">registry</span><span class="p">.</span><span class="n">npm</span><span class="p">.</span><span class="n">taobao</span><span class="p">.</span><span class="n">org</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>2、重新执行</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">npm install
-</code></pre></td></tr></table>
-</div>
-</div><p>3、在2的过程中遇到卡顿，推测和git.exe 有关，下载安装 dev-sidecar 加速器，打开 npm 加速和 git.exe 代理后成功安装</p>
-<p>4、执行</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">npm install core-js@2
-</code></pre></td></tr></table>
-</div>
-</div><p>5、 尝试运行 npm run dev ，但遇到报错: &ldquo;Cannot find modules xxxx&rdquo;, 需要单独安装这个模块</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">npm install xxxx(报错的模块名) --save
-</code></pre></td></tr></table>
-</div>
-</div><p>这里差不多遇到了十几次，而且每次都只提示一个模块（晕，也没有别的方法，只能一个个安装。一般都能安装成功，如果还是不成功，试试以下办法：</p>
-<p>（1）查看项目根文件夹中的package.json中显示的该模块需要的版本，精准安装该版本</p>
-<p>（2）报错，大致意思是在该依赖文件夹下找不到package.json。例如我的一直提示 entities/maps/entities.json 下找不到package.json，无论怎么重新安装都没用，后来发现真正报错的是另一个模块markdown-to 下的entities.js文件，这个文件中引入entities.js的路径出现错误，少了一层lib文件夹。改正之后项目终于成功运行。</p>
+    <p>你好，我是MazeL98，一名社科转码前端学习者，目前学习的框架是Vue.js，正在以找到第一份工作为目的积攒项目经验，欢迎一起交流学习。</p>
 
 </section>
 
 
     <footer class="article-footer">
     
-    <section class="article-tags">
-        
-            <a href="/tags/vue/">Vue</a>
-        
-            <a href="/tags/project/">project</a>
-        
-    </section>
-
 
     
     <section class="article-copyright">
@@ -349,25 +292,6 @@
 
     <aside class="related-contents--wrapper">
     
-    
-        <h2 class="section-title">相关文章</h2>
-        <div class="related-contents">
-            <div class="flex article-list--tile">
-                
-                    
-<article class="">
-    <a href="/p/%E5%A6%82%E4%BD%95%E5%9C%A8github%E4%B8%8A%E5%BF%AB%E9%80%9F%E6%89%BE%E5%88%B0%E9%9C%80%E8%A6%81%E7%9A%84%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">如何在Github上快速找到需要的开源项目</h2>
-        </div>
-    </a>
-</article>
-                
-            </div>
-        </div>
     
 </aside>
 

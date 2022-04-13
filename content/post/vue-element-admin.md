@@ -2,6 +2,8 @@
 title: "第一次本地运行vue-element-admin解决npm install报错git dep preparation failed"
 date: 2022-03-16T14:24:22+08:00
 draft: false
+categories: ["学习笔记"]
+tags: ["Vue","project"]
 ---
 
 项目地址：https://github.com/PanJiaChen/vue-element-admin

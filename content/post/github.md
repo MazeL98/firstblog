@@ -1,7 +1,9 @@
 ---
-title: "如何在github上快速找到需要的开源项目"
+title: "如何在Github上快速找到需要的开源项目"
 date: 2022-03-16T14:56:37+08:00
 draft: false
+categories: ["学习笔记"]
+tags: ["Github"]
 ---
 
 | 指令                   | 含义                                                         |
