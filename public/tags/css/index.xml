@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CSS on MazeL98的不老歌</title>
+    <link>/tags/css/</link>
+    <description>Recent content in CSS on MazeL98的不老歌</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 26 Apr 2022 01:34:01 +0800</lastBuildDate><atom:link href="/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>理解margin负值在CSS圣杯布局中的应用</title>
+      <link>/p/%E7%90%86%E8%A7%A3margin%E8%B4%9F%E5%80%BC%E5%9C%A8css%E5%9C%A3%E6%9D%AF%E5%B8%83%E5%B1%80%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</link>
+      <pubDate>Tue, 26 Apr 2022 01:34:01 +0800</pubDate>
+      
+      <guid>/p/%E7%90%86%E8%A7%A3margin%E8%B4%9F%E5%80%BC%E5%9C%A8css%E5%9C%A3%E6%9D%AF%E5%B8%83%E5%B1%80%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</guid>
+      <description>假设一个页面是圣杯布局（三栏，左右两栏固定宽度 150px，中间栏自适应），很多人会选择用 三个浮动盒子 + margin 负值来实现，例如： 1 2 3 4 5 6 7 8 &amp;lt;div</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,7 +6,174 @@
         <description>Recent content on MazeL98的不老歌</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 16 Mar 2022 14:56:37 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 26 Apr 2022 01:34:01 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>理解margin负值在CSS圣杯布局中的应用</title>
+        <link>/p/%E7%90%86%E8%A7%A3margin%E8%B4%9F%E5%80%BC%E5%9C%A8css%E5%9C%A3%E6%9D%AF%E5%B8%83%E5%B1%80%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</link>
+        <pubDate>Tue, 26 Apr 2022 01:34:01 +0800</pubDate>
+        
+        <guid>/p/%E7%90%86%E8%A7%A3margin%E8%B4%9F%E5%80%BC%E5%9C%A8css%E5%9C%A3%E6%9D%AF%E5%B8%83%E5%B1%80%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/</guid>
+        <description>&lt;p&gt;假设一个页面是圣杯布局（三栏，左右两栏固定宽度 150px，中间栏自适应），很多人会选择用 三个浮动盒子 + margin 负值来实现，例如：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;clearfix&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;   
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;main&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;      
+        &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;body&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;我是中间&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;   
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;   
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;left&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;我是左边&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;   
+    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;right&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;我是右边&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; 
+&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; 
+&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;嘿，我是normal flow&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;注意：使用这种方法时中间栏的标签必须放在左右两栏的前面。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+#main {
+  width: 100%;
+  height: 300px;
+  float: left;
+  background-color: pink;
+}
+
+#main #body {
+  margin: 0 150px;
+  height: 100%;
+  background-color: skyblue;
+}
+
+#left,
+#right {
+  width: 150px;
+  height: 300px;
+  float: left;
+  background-color: #a2d6a0;
+}
+
+#left {
+  margin-left: -100%;
+}
+
+#right {
+  margin-left: -150px;
+}
+
+.clearfix:after {
+  content: &amp;#34;&amp;#34;;
+  display: table;
+  clear: both;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;但我一直不明白，为什么上面这个例子中，给左栏添加 margin-left: -100% 后左栏会跑到上一行中？于是进行了如下探索。&lt;/p&gt;
+&lt;p&gt;我们知道，在一般文档流布局中 margin-left 值为负数时，元素与正常移动方向相反，向左移动，负数的绝对值越大，元素向左移动得越远，甚至溢出屏幕。&lt;/p&gt;
+&lt;p&gt;但如果是给浮动元素添加 margin-left 负值呢？例如下图：三个宽高为 100px 的靠左浮动的盒子。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/posts/margin-1.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;给它们都添加 margin-left: -50px 之后：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/posts/margin-2.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;发生了什么？依次来看：&lt;/p&gt;
+&lt;p&gt;粉盒子会向左移动 50px，由于靠左浮动的元素要靠左贴边，绿&amp;amp;紫也会紧贴上来。&lt;/p&gt;
+&lt;p&gt;在此基础上，绿盒子继续向左移动 50px，遮住了粉盒子剩下的一半。紫盒子也依旧紧贴上来。&lt;/p&gt;
+&lt;p&gt;最后，紫盒子也要向左移动 50px，因此遮住绿盒子的一半。&lt;/p&gt;
+&lt;p&gt;总结一下，三个浮动元素靠左贴边的同时各自相对地向左移动了 50px。&lt;/p&gt;
+&lt;p&gt;如果只给绿&amp;amp;紫盒子添加 margin-left: -50px：&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;/img/posts/margin-3.png&#34; width=&#34;20%&#34;/&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;那么只有绿&amp;amp;紫盒子相对向左移动 50px 。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;接下来考虑到一种情况，依旧是三个浮动盒子，但粉盒子非常宽，极端一点， 直接width: 100%，那么绿&amp;amp;紫盒子无疑会被挤到下一行。&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;/img/posts/margin-4.png&#34; width=&#34;50%&#34;/&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;如果此时给绿盒子添加margin-left: -50px，会怎么样？&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;/img/posts/margin-5.png&#34; width=&#34;50%&#34;/&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;绿盒子向左移动 50px，如果它们都是在同一行，此时粉盒子最右边的 50px将被绿盒子给遮住，但现在不行，因为不可能让绿盒子拆分为两半，它只能保留在下一行。&lt;/p&gt;
+&lt;p&gt;那么，如果给绿盒子添加 margin-left: -100px 呢？绿盒子被允许向左移动 100px，依旧想象一下它们在同一行，那么绿盒子将遮盖粉盒子最右侧的 100px，因为100px 正好是绿盒子的宽度，所以它将能完整地出现在第一行。&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;/img/posts/margin-6.png&#34; width=&#34;50%&#34;/&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;以此类推，粉盒子就是圣杯布局的中间栏，绿盒子就是左侧栏。如果给绿盒子添加 margin-left: -100%，就是让绿盒子向左移动一个页面宽度的距离，它将出现在自己原位置的正上方。&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;/img/posts/margin-7.png&#34; width=&#34;50%&#34;/&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;总结一下，和一般文档流时使用 margin 负值不同，给浮动元素添加 margin 负值，关键在于理解“浮动”的吸附（贴边）特性（即使被挤到换行这个特性也依然存在）&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>如何在Github上快速找到需要的开源项目</title>
         <link>/p/%E5%A6%82%E4%BD%95%E5%9C%A8github%E4%B8%8A%E5%BF%AB%E9%80%9F%E6%89%BE%E5%88%B0%E9%9C%80%E8%A6%81%E7%9A%84%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/</link>
         <pubDate>Wed, 16 Mar 2022 14:56:37 +0800</pubDate>
