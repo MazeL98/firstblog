@@ -274,6 +274,10 @@
 
 .related-contents--wrapper {
     margin-bottom: var(--section-separation);
+    .section-title {
+        font-size: 1.8rem;
+        line-height: 30px;
+    }
 }
 
 .related-contents {
@@ -289,17 +293,30 @@
         flex-shrink: 0;
         overflow: hidden;
         width: 250px;
-        height: 150px;
+        height: 100px;
 
         .article-title {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
+            line-height: 26px;
             margin: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            /*弹性伸缩盒子模型显示*/
+            display: -webkit-box;
+            /*限制在一个块元素显示的文本的行数*/
+            -webkit-line-clamp: 2; /*也就是在第几行显示省略号*/
+            /*设置或检索伸缩盒对象的子元素的排列方式*/
+            -webkit-box-orient: vertical;
         }
 
         &.has-image {
             .article-details {
                 padding: 20px;
-                background: linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.75) 100%);
+                background: linear-gradient(
+                    0deg,
+                    rgba(0, 0, 0, 0.25) 0%,
+                    rgba(0, 0, 0, 0.75) 100%
+                );
             }
         }
     }
@@ -338,7 +355,8 @@
     blockquote {
         position: relative;
         margin: 1.5em 0;
-        border-left: var(--blockquote-border-size) solid var(--card-separator-color);
+        border-left: var(--blockquote-border-size) solid
+            var(--card-separator-color);
         padding: 15px calc(var(--card-padding) - var(--blockquote-border-size));
         background-color: var(--blockquote-background-color);
     }

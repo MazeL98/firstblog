@@ -78,7 +78,8 @@
     transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
 }
 .hamburger--spin .hamburger-inner::after {
-    transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition: bottom 0.1s 0.25s ease-in,
+        transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
 .hamburger--spin.is-active .hamburger-inner {
@@ -94,7 +95,8 @@
 .hamburger--spin.is-active .hamburger-inner::after {
     bottom: 0;
     transform: rotate(-90deg);
-    transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: bottom 0.1s ease-out,
+        transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 #toggle-menu {
@@ -153,7 +155,7 @@
     }
 
     @include respond(xl) {
-        margin-top: 30px;
+        margin-top: 20px;
     }
 
     li {
@@ -165,7 +167,7 @@
             margin-bottom: 15px;
 
             @include respond(xl) {
-                margin-bottom: 20px;
+                margin-bottom: 15px;
             }
         }
 
@@ -176,7 +178,7 @@
 
         svg {
             stroke-width: 1.33;
-            margin-right: 20px;
+            margin-right: 10px;
 
             width: 20px;
             height: 20px;
@@ -191,6 +193,7 @@
 
         span {
             flex: 1;
+            font-size: 1.7rem;
         }
 
         &.current {
