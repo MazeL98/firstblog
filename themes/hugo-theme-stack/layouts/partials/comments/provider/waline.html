@@ -1,37 +1,84 @@
 <script src='//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js'></script>
 <div id="waline" class="waline-container"></div>
 <style>
-    .waline-container {
-        background-color: var(--card-background);
-        border-radius: var(--card-border-radius);
-        box-shadow: var(--shadow-l1);
-        padding: var(--card-padding);
-        --waline-bgcolor: transparent;
-        --waline-theme-color: #ececec;
-        --waline-active-color: #424242;
-        --waline-border: 2px solid #303030;
+  .waline-container {
+    background-color: var(--card-background);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--shadow-l1);
+    padding: var(--card-padding);
+    --waline-bgcolor: transparent;
+    --waline-theme-color: #ececec;
+    --waline-active-color: #889e81;
+    --waline-border: 3px solid #303030;
+    --waline-white: #303030
+  }
 
-    }
-    .waline-container .vcount {
-        color: var(--card-text-color-main);
-    }
+  .waline-container .vheader .vheader-item label {
+    color: rgba(234, 234, 234, 0.8) !important;
+    font-size: 14px !important;
+  }
+
+  .waline-container .vheader .vheader-item input {
+    margin-left: -5px !important;
+    color: rgba(234, 234, 234, 0.8) !important;
+    font-size: 12px !important;
+
+  }
+
+  .waline-container .vcount {
+    color: var(--card-text-color-main);
+  }
+
+  .waline-container .vcomment .vpanel .veditor {
+    color: rgba(234, 234, 234, 0.8) !important;
+
+    font-size: 16px;
+    box-sizing: border-box;
+    padding: 10px 0 10px 10px;
+  }
+
+  .waline-container .vfooter .vactions>* {
+    padding: 0 5px;
+  }
+
+  .waline-container .vfooter .vemoji-popup {
+    background-color: rgb(66, 66, 66);
+    border: 2px solid #303030
+  }
+
+  .waline-container .vfooter .vemoji-popup .vtabs {
+    height: 2.5em;
+    line-height: 2.5em;
+  }
+
+  .waline-container .vfooter .vemoji-popup .vtab {
+    padding: 0 0.8em 0 0.5em;
+
+  }
+
+  .waline-container .vfooter .vemoji-popup .vtab.active {
+    border: 0;
+    border-right: 1px solid var(--waline-border-color);
+    border-radius: 0;
+  }
 </style>
 
 {{- with .Site.Params.comments.waline -}}
 {{- $config := dict "el" "#waline" "dark" `html[data-scheme="dark"]` -}}
-{{- $replaceKeys := dict "serverurl" "serverURL" "requiredmeta" "requiredMeta" "wordlimit" "wordLimit" "pagesize" "pageSize" "avatarcdn" "avatarCDN" "avatarforce" "avatarForce" -}}
+{{- $replaceKeys := dict "serverurl" "serverURL" "requiredmeta" "requiredMeta" "wordlimit" "wordLimit" "pagesize"
+"pageSize" "avatarcdn" "avatarCDN" "avatarforce" "avatarForce" -}}
 
 {{- range $key, $val := . -}}
-    {{- if $val -}}  
-        {{- $replaceKey := index $replaceKeys $key -}}
-        {{- $k := default $key $replaceKey -}}
+{{- if $val -}}
+{{- $replaceKey := index $replaceKeys $key -}}
+{{- $k := default $key $replaceKey -}}
 
-        {{- $config = merge $config (dict $k $val) -}}
-    {{- end -}}
+{{- $config = merge $config (dict $k $val) -}}
+{{- end -}}
 {{- end -}}
 
 <script>
-    /// Waline client configuration see: https://waline.js.org/en/reference/client.html
-    new Waline({{ $config | jsonify | safeJS }});
+  /// Waline client configuration see: https://waline.js.org/en/reference/client.html
+  new Waline({{ $config | jsonify | safeJS }});
 </script>
 {{- end -}}

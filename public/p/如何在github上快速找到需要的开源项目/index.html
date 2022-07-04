@@ -383,23 +383,69 @@
     <script src='//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js'></script>
 <div id="waline" class="waline-container"></div>
 <style>
-    .waline-container {
-        background-color: var(--card-background);
-        border-radius: var(--card-border-radius);
-        box-shadow: var(--shadow-l1);
-        padding: var(--card-padding);
-        --waline-bgcolor: transparent;
-        --waline-theme-color: #ececec;
-        --waline-active-color: #424242;
-        --waline-border: 2px solid #303030;
+  .waline-container {
+    background-color: var(--card-background);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--shadow-l1);
+    padding: var(--card-padding);
+    --waline-bgcolor: transparent;
+    --waline-theme-color: #ececec;
+    --waline-active-color: #889e81;
+    --waline-border: 3px solid #303030;
+    --waline-white: #303030
+  }
 
-    }
-    .waline-container .vcount {
-        color: var(--card-text-color-main);
-    }
+  .waline-container .vheader .vheader-item label {
+    color: rgba(234, 234, 234, 0.8) !important;
+    font-size: 14px !important;
+  }
+
+  .waline-container .vheader .vheader-item input {
+    margin-left: -5px !important;
+    color: rgba(234, 234, 234, 0.8) !important;
+    font-size: 12px !important;
+
+  }
+
+  .waline-container .vcount {
+    color: var(--card-text-color-main);
+  }
+
+  .waline-container .vcomment .vpanel .veditor {
+    color: rgba(234, 234, 234, 0.8) !important;
+
+    font-size: 16px;
+    box-sizing: border-box;
+    padding: 10px 0 10px 10px;
+  }
+
+  .waline-container .vfooter .vactions>* {
+    padding: 0 5px;
+  }
+
+  .waline-container .vfooter .vemoji-popup {
+    background-color: rgb(66, 66, 66);
+    border: 2px solid #303030
+  }
+
+  .waline-container .vfooter .vemoji-popup .vtabs {
+    height: 2.5em;
+    line-height: 2.5em;
+  }
+
+  .waline-container .vfooter .vemoji-popup .vtab {
+    padding: 0 0.8em 0 0.5em;
+
+  }
+
+  .waline-container .vfooter .vemoji-popup .vtab.active {
+    border: 0;
+    border-right: 1px solid var(--waline-border-color);
+    border-radius: 0;
+  }
 </style><script>
-    
-    new Waline({"dark":"html[data-scheme=\"dark\"]","el":"#waline","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/alus"],"locale":{"admin":"Admin"},"placeholder":"欢迎交流","requiredMeta":["name","email","url"],"serverURL":"https://comment-api-982hw8hh5-mazel98.vercel.app/"});
+  
+  new Waline({"dark":"html[data-scheme=\"dark\"]","el":"#waline","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili","https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/alus"],"lang":"zh-CN","locale":{"admin":"Admin"},"placeholder":"Hello, 一日不见如隔一日~","requiredMeta":["name","email","url"],"serverURL":"https://waline-v1-1vp4noebi-mazel98.vercel.app","visitor":true});
 </script>
 
     
